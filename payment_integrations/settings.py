@@ -26,7 +26,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-$syb@@1s&kw2t)v%t=l1*17g+z
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'payment-gateway-python.herokuapp.com'
+    # Production host
+    'payment-gateway-python.herokuapp.com',
+
+    # Development host
+    '127.0.0.1'
 ]
 
 
@@ -122,6 +126,10 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
