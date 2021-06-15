@@ -25,7 +25,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-$syb@@1s&kw2t)v%t=l1*17g+z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'payment-gateway-python.herokuapp.com'
+]
 
 
 # Application definition
